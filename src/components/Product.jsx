@@ -53,7 +53,7 @@ function Product(props) {
         }
         cList.push(cObject);
         props.storeCartList(cList);
-        console.log("pIndex", pItem, pQty);
+        console.log("Added Item to Cart and quantity:", pItem, pQty);
     }
 
     return (

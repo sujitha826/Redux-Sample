@@ -1,25 +1,25 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 
 function AddToCartDialog(props) {
 
-    const [enteredQty, setEnteredQty] = useState(1)
+    const [enteredQty, setEnteredQty] = useState(1);
 
     function onClickClose() {
-        props.onClose()
+        props.onClose();
     }
 
     function onAddProduct() {
-        let availQty = parseInt(props.selectedData.qty)
-        let enterQty = parseInt(enteredQty)
+        let availQty = parseInt(props.selectedData.qty);
+        let enterQty = parseInt(enteredQty);
         if (enterQty > availQty)
-            return
+            return;
 
-        props.onAddToCartCB(props.selectedData, enterQty)
-        props.onClose()
+        props.onAddToCartCB(props.selectedData, enterQty);
+        props.onClose();
     }
 
     function onChangeQty(e) {
-        setEnteredQty(e.target.value)
+        setEnteredQty(e.target.value);
     }
 
     return (
