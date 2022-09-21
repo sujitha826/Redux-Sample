@@ -18,9 +18,9 @@ function Product(props) {
     }, [props.productList]);
 
     function onAddProductCB(pData) {
-        let pList = Object.assign([], props.productList)           // extract the list array already in store
-        pData.id = pData.brand + pData.modal
-        let productExist = pList.findIndex((item) => { return item.id === pData.id })
+        let pList = Object.assign([], props.productList);           // extract the list array already in store
+        pData.id = pData.brand + pData.modal;
+        let productExist = pList.findIndex((item) => { return item.id === pData.id });
         if (productExist === -1)
             pList.push(pData);
         else {

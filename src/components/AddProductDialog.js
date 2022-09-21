@@ -20,7 +20,7 @@ function AddProductDialog(props) {
     }
 
     return (
-        <div className='dialog-base add-product-base'>
+        <div className='dialog-base'>
             <div className="window">
                 <div className="header">
                     <div>
